@@ -1,0 +1,284 @@
+Locations: A, B, C, D  |  Drivers: D1 (at A), D2 (at D)  |  Fare: Rs. 15 per km
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter pickup location :   Enter drop location   : 
+  ---------- BOOKING CONFIRMED ----------
+  Rider ID        : 1
+  Route           : B -> C
+  Cab D1 assigned (2 km away).
+  Trip distance: 3 km
+  Fare: Rs. 45  (3 km x Rs. 15)
+  Driver status   : D1 is now BUSY
+  ---------------------------------------
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter pickup location :   Enter drop location   : 
+  ---------- BOOKING CONFIRMED ----------
+  Rider ID        : 2
+  Route           : B -> D
+  Cab D2 assigned (7 km away).
+  Trip distance: 7 km
+  Fare: Rs. 105  (7 km x Rs. 15)
+  Driver status   : D2 is now BUSY
+  ---------------------------------------
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter pickup location :   Enter drop location   : 
+  No cab available. Rider 3 added to waiting queue.
+  Position in queue: 1  (A -> C)
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7): 
+  DRIVER STATUS
+  +-----------+------------------+-----------+----------------------+
+  | Driver ID | Current Location | Status    | Current Rider        |
+  +-----------+------------------+-----------+----------------------+
+  | D1        | A                | BUSY      | Rider 1 (B -> C)     |
+  | D2        | D                | BUSY      | Rider 2 (B -> D)     |
+  +-----------+------------------+-----------+----------------------+
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7): 
+  WAITING QUEUE (FIFO)
+  +----------+----------+--------+--------+
+  | Position | Rider ID | Pickup | Drop   |
+  +----------+----------+--------+--------+
+  | 1        | 3        | A      | C      |
+  +----------+----------+--------+--------+
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter driver ID (e.g. D1): 
+  Trip of Rider 1 completed.
+  Driver D1 is now at C and is available.
+  Serving waiting Rider 3...
+
+  ---------- BOOKING CONFIRMED ----------
+  Rider ID        : 3
+  Route           : A -> C
+  Cab D1 assigned (5 km away).
+  Trip distance: 5 km
+  Fare: Rs. 75  (5 km x Rs. 15)
+  Driver status   : D1 is now BUSY
+  ---------------------------------------
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7): 
+  DRIVER STATUS
+  +-----------+------------------+-----------+----------------------+
+  | Driver ID | Current Location | Status    | Current Rider        |
+  +-----------+------------------+-----------+----------------------+
+  | D1        | C                | BUSY      | Rider 3 (A -> C)     |
+  | D2        | D                | BUSY      | Rider 2 (B -> D)     |
+  +-----------+------------------+-----------+----------------------+
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7): 
+  WAITING QUEUE (FIFO)
+  The waiting queue is empty.
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7): 
+  CITY ROAD MAP (bidirectional roads)
+  Adjacency list:
+    A : B(2 km), C(6 km)
+    B : A(2 km), C(3 km), D(8 km)
+    C : B(3 km), A(6 km), D(4 km)
+    D : C(4 km), B(8 km)
+
+  Shortest road distances in km (calculated by Dijkstra):
+    From\To    A    B    C    D
+    A          0    2    5    9
+    B          2    0    3    7
+    C          5    3    0    4
+    D          9    7    4    0
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7): 
+  TRIP HISTORY
+  +-------+--------+--------+------+--------------+-----------+---------+-------------+
+  | Rider | Driver | Pickup | Drop | Driver->Pick | Trip (km) | Fare    | Status      |
+  +-------+--------+--------+------+--------------+-----------+---------+-------------+
+  | 1     | D1     | B      | C    | 2 km         | 3         | Rs. 45  | COMPLETED   |
+  | 2     | D2     | B      | D    | 7 km         | 7         | Rs. 105 | IN PROGRESS |
+  | 3     | D1     | A      | C    | 5 km         | 5         | Rs. 75  | IN PROGRESS |
+  +-------+--------+--------+------+--------------+-----------+---------+-------------+
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter pickup location :   Enter drop location   :   Location Z not found.
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   [!] Invalid choice 9. Please enter a number from 1 to 7.
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   [!] Invalid input 'abc'. Please enter a number from 1 to 7.
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter driver ID (e.g. D1): 
+  Trip of Rider 3 completed.
+  Driver D1 is now at C and is available.
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Enter driver ID (e.g. D1):   [!] Driver D9 not found. Valid IDs: D1, D2
+
+========== CAB BOOKING SIMULATOR ==========
+
+1. Book a Cab
+2. Complete a Trip
+3. View Driver Status
+4. View Waiting Queue
+5. Display City Road Map
+6. View Trip History
+7. Exit
+
+===========================================
+Enter your choice (1-7):   Thank you for using Cab Booking Simulator. Goodbye!
